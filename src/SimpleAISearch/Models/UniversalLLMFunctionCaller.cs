@@ -91,6 +91,8 @@ namespace SimpleAISearch.Models
             if (nextFunctionCall.Name == "Finished")
             {
                 string finalMessage = nextFunctionCall.Parameters[0].Value.ToString();
+                var count = chatHistory.Count;
+                var finalMessage2 = chatHistory[count-3];
                 return finalMessage;
             }
 
