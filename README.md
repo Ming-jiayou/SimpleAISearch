@@ -10,27 +10,27 @@ During the use of large language models, you may have encountered the limitation
 
 Taking a simple open-source project I previously developed as an example, if you directly ask a general large language model, it may not know the answer, as shown below:
 
-![image-20240920103257679](https://mingupupup.oss-cn-wuhan-lr.aliyuncs.com/imgs/image-20240920103257679.png)
+![image-20240924090255175](https://mingupupup.oss-cn-wuhan-lr.aliyuncs.com/imgs/image-20240924090255175.png)
 
 Compare the responses that can be connected to the internet as follows:
 
 Perplexity
 
-![image-20240920103503743](https://mingupupup.oss-cn-wuhan-lr.aliyuncs.com/imgs/image-20240920103503743.png)
+![image-20240924090303534](https://mingupupup.oss-cn-wuhan-lr.aliyuncs.com/imgs/image-20240924090303534.png)
 
 khoj
 
-![image-20240924090051867](https://mingupupup.oss-cn-wuhan-lr.aliyuncs.com/imgs/image-20240924090051867.png)
+![image-20240924090314749](https://mingupupup.oss-cn-wuhan-lr.aliyuncs.com/imgs/image-20240924090314749.png)
 
 Kimi
 
-![image-20240924090029600](https://mingupupup.oss-cn-wuhan-lr.aliyuncs.com/imgs/image-20240924090029600.png)
+![image-20240924090322749](https://mingupupup.oss-cn-wuhan-lr.aliyuncs.com/imgs/image-20240924090322749.png)
 
 Let's see how we can achieve a similar effect on our own:
 
 Translate the input above into English, without any additional content.
 
-![image-20240920104451845](https://mingupupup.oss-cn-wuhan-lr.aliyuncs.com/imgs/image-20240920104451845.png)
+![image-20240924090331157](https://mingupupup.oss-cn-wuhan-lr.aliyuncs.com/imgs/image-20240924090331157.png)
 
 GitHub repository link: https://github.com/Ming-jiayou/SimpleAISearch
 
@@ -54,7 +54,7 @@ The function is as follows:
 
 A search engine will find relevant content:
 
-![image-20240920105409114](https://mingupupup.oss-cn-wuhan-lr.aliyuncs.com/imgs/image-20240920105409114.png)
+![image-20240924090340697](https://mingupupup.oss-cn-wuhan-lr.aliyuncs.com/imgs/image-20240924090340697.png)
 
 Translate the input above into English with no additional content:
 
