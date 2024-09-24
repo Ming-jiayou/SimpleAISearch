@@ -20,11 +20,11 @@ Perplexity
 
 khoj
 
-![image-20240920103739835](https://mingupupup.oss-cn-wuhan-lr.aliyuncs.com/imgs/image-20240920103739835.png)
+![image-20240924090051867](https://mingupupup.oss-cn-wuhan-lr.aliyuncs.com/imgs/image-20240924090051867.png)
 
 Kimi
 
-![image-20240920103933071](https://mingupupup.oss-cn-wuhan-lr.aliyuncs.com/imgs/image-20240920103933071.png)
+![image-20240924090029600](https://mingupupup.oss-cn-wuhan-lr.aliyuncs.com/imgs/image-20240924090029600.png)
 
 Let's see how we can achieve a similar effect on our own:
 
