@@ -1,14 +1,18 @@
-# SimpleAISearch：基于C# Semantic Kernel 与 DuckDuckGo实现简单的AI搜索
+[简体中文](./README.zh.md) | English
 
-最近AI搜索很火爆，有Perplexity、秘塔AI、MindSearch、Perplexica、memfree、khoj等等。
+# SimpleAISearch✨
 
-在使用大语言模型的过程中，或许你也遇到了这种局限，就是无法获取网上最新的信息，导致回答的内容不是基于最新的信息，为了解决这个问题，可以通过LLM+搜索引擎的方式实现。
+## Implement a simple AI search using C# Semantic Kernel and DuckDuckGo.✨
 
-以我之前开源的一个简单项目为例，如果直接问一般的大语言模型是不知道的，如下所示：
+Recently, AI search has become very popular, with platforms like Perplexity, Metaphora, MindSearch, Perplexica, memfree, khoj, and more.
+
+During the use of large language models, you may have encountered the limitation of not being able to access the latest online information, resulting in responses that are not based on the most up-to-date information. To address this issue, a solution can be achieved through a combination of large language models (LLM) and search engines.
+
+Taking a simple open-source project I previously developed as an example, if you directly ask a general large language model, it may not know the answer, as shown below:
 
 ![image-20240920103257679](https://mingupupup.oss-cn-wuhan-lr.aliyuncs.com/imgs/image-20240920103257679.png)
 
-对比可以联网的回答：
+Compare the responses that can be connected to the internet as follows:
 
 Perplexity
 
@@ -22,55 +26,55 @@ Kimi
 
 ![image-20240920103933071](https://mingupupup.oss-cn-wuhan-lr.aliyuncs.com/imgs/image-20240920103933071.png)
 
-那么我们如何自己实现类似的效果呢？
+Let's see how we can achieve a similar effect on our own:
 
-先来看看自己实现的效果：
+Translate the input above into English, without any additional content.
 
 ![image-20240920104451845](https://mingupupup.oss-cn-wuhan-lr.aliyuncs.com/imgs/image-20240920104451845.png)
 
-源码GitHub地址：https://github.com/Ming-jiayou/SimpleAISearch
+GitHub repository link: https://github.com/Ming-jiayou/SimpleAISearch
 
-如果对此感兴趣的话，就可以继续往下阅读。
+If you're interested, you can continue reading below.
 
-## 实现思路
+## Implementation Ideas
 
-本质上就是LLM+搜索引擎。
+Essentially, it's about integrating LLM with a search engine.
 
-首先需要能够实现函数调用功能，在之前的文章中已经有所说明。主要介绍一下实现思路，源码已经开源，感兴趣的话可以自己去看下具体代码。
+First, you need to enable function calling capabilities, which I've previously discussed. I'll mainly outline the implementation ideas here, and the source code is open-sourced, so feel free to check it out for more details.
 
-首先在插件中添加调用搜索引擎的代码，我这里搜索引擎选用的是DuckDuckGo。
+First, add the code to call the search engine in the plugin. The search engine I used here is DuckDuckGo.
 
-开始执行时，LLM会判断需要调用这个函数，并且参数是问题：
+When execution starts, the LLM will determine that it needs to call this function, and the parameter is the question:
 
 ![image-20240920105218166](https://mingupupup.oss-cn-wuhan-lr.aliyuncs.com/imgs/image-20240920105218166.png)
 
-这个函数如下所示：
+The function is as follows:
 
 ![image-20240920105254572](https://mingupupup.oss-cn-wuhan-lr.aliyuncs.com/imgs/image-20240920105254572.png)
 
-搜索引擎会找到相关内容：
+A search engine will find relevant content:
 
 ![image-20240920105409114](https://mingupupup.oss-cn-wuhan-lr.aliyuncs.com/imgs/image-20240920105409114.png)
 
-让LLM根据获取到的这些信息给出回答：
+Translate the input above into English with no additional content:
 
 ![image-20240920105518735](https://mingupupup.oss-cn-wuhan-lr.aliyuncs.com/imgs/image-20240920105518735.png)
 
-目前是经过总结之后显示在界面上，也可以修改为不经过总结的。
+Currently, after summarization, the results are displayed on the interface, and it can also be modified to not go through summarization.
 
-以上就是实现的一个简单思路。
+That's the simple idea for the implementation.
 
-## 快速体验
+## Quick Start
 
-**通过源码构建**
+**Build from Source Code**
 
-和之前的LLM项目一样，只需appsettings.example.json修改为appsettings.json选择你使用的平台并填入API Key即可。
+Similar to previous LLM projects, simply rename `appsettings.example.json` to `appsettings.json`, select your platform of choice, and fill in your API Key.
 
-**直接体验**
+**Direct Experience**
 
-我已经在github上发布了两个版本一个依赖框架，一个不依赖框架：
+I have published two versions on GitHub, one that requires a framework and one that does not:
 
 ![image-20240920113656942](https://mingupupup.oss-cn-wuhan-lr.aliyuncs.com/imgs/image-20240920113656942.png)
 
-下载解压之后，在appsettings中填入你的api key即可使用。
+Download and unzip, then fill in your API key in appsettings to start using it.
 
